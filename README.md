@@ -14,4 +14,4 @@ Außerdem findest Du in dem jeweiligen Verzeichnis auch die Konfigurationsdateie
 
 ## Kontaktdaten
 
-Falls Dir während des Kurses etwas aufgefallen ist, oder Du einen Fehler entdeckt hast, eröffne bitte ein Issue in diesem Repository oder sende eine Mail an: 
+Falls Dir während des Kurses etwas aufgefallen ist, oder Du einen Fehler entdeckt hast, eröffne bitte ein Issue in diesem Repository oder sende eine Mail an:  academy@heise.de   

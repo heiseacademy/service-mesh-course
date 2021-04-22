@@ -4,10 +4,10 @@
 
 ## Kommandos
 
-`kubectl` 
-`kubectl get --help` 
-`kubectl completion zsh` 
-`source <(kubectl completion zsh)`
-`kubectl completion --help` 
+* `kubectl` 
+* `kubectl get --help` 
+* `kubectl completion zsh` 
+* `source <(kubectl completion zsh)`
+* `kubectl completion --help` 
 
 ## Aktualisierungen und Anmerkungen
