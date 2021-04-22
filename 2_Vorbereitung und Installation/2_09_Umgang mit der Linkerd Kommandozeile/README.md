@@ -2,7 +2,7 @@
 
 ## Links
 
-* https://linkerd.io/2/reference/cli/>
+* https://linkerd.io/2/reference/cli/
 
 ## Kommandos
 
