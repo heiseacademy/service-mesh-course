@@ -7,7 +7,7 @@
 ## Kommandos
 
   * `kubectl apply -f nginx-iptables.yaml`
-  * `kubectl exec -ti nginx<tab> -- sh` (bei diesem Kommando den Podnamen durch Shellcompletion mittels <tab> geben lassen)
+  * `kubectl exec -ti nginx<tab> -- sh` (bei diesem Kommando den Podnamen durch Shellcompletion mittels `<tab>` geben lassen)
   * `iptables -L -t nat -n`
 
 ## Aktualisierungen und Anmerkungen
