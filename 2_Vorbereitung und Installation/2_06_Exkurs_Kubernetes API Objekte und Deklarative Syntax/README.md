@@ -1,4 +1,4 @@
-# Kubernetes API Objekte und Deklarative Syntax
+# Exkurs Kubernetes API Objekte und Deklarative Syntax
 
 ## Links
 
