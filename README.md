@@ -7,8 +7,10 @@ Dieses Repository enthält alle Materialien zum Nachvollziehen der Beispiele aus
 Das Repository ist nach den Kapiteln und Lektionen strukturiert. Zu jeder Lektion findet sich ein README. Dieses README enthält normalerweise folgende Abschnitte:
 
 * Links - Eine Auflistung aller im Video genannten Links
-* Kommandos - Alle längeren Kommandos, die in der Shell eines Videos ausgeführt werden. 
+* Kommandos - Alle längeren Kommandos, die in der Shell eines Videos ausgeführt werden. Die Kommandos werden hier nicht erklärt sondern dienen als Kopiervorlage um gerade bei komplexen Kommandos Tippfehler zu vermeiden. 
 * Aktualisierungen und Anmerkungen - Sollten nach dem Dreh des Videos noch Aktualisierungen oder Anmerkungen aufgetaucht sein, findest Du diese in diesem Abschnitt.
+
+Außerdem findest Du in dem jeweiligen Verzeichnis auch die Konfigurationsdateien für die Beispiele. Idealerweise gehst Du in das passende Verzeichnis zu einer Lektion und führst dann die Kommandos aus, wie sie im Video gezeigt werden. 
 
 ## Kontaktdaten
 
