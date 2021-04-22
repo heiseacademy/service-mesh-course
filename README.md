@@ -1,4 +1,4 @@
-# Zusatzmaterialien und Quellcode für den Service Mesh Video Kurs
+# Zusatzmaterialien und Quellcode für den Videokurs Service Mesh
 
 Dieses Repository enthält alle Materialien zum Nachvollziehen der Beispiele aus dem Video Kurs. Außerdem enthält es Links und längere Kommandos aus dem Kurs, so dass es nicht nötig sein sollte längere Textpassagen aus den Videos abzutippen.
 
