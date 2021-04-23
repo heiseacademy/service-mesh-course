@@ -1,0 +1,19 @@
+---
+apiVersion: linkerd.io/v1alpha2
+kind: ServiceProfile
+metadata:
+  creationTimestamp: null
+  name: schedule.demo.svc.cluster.local
+  namespace: demo
+spec:
+  routes:
+    - condition:
+        method: GET
+        pathRegex: /
+      name: GET /
+      responseClasses:
+        - condition:
+            status:
+              max: 200
+              min: 200
+      timeout: 500ms # <- Definition of 0.5 second timeout for this Service

@@ -1,0 +1,37 @@
+# Service Profiles with retries
+apiVersion: linkerd.io/v1alpha2
+kind: ServiceProfile
+metadata:
+  creationTimestamp: null
+  name: speakers.demo.svc.cluster.local
+  namespace: demo
+spec:
+  retryBudget: # <- defines the retry budget for this service
+    minRetriesPerSecond: 10 
+    retryRatio: 0.2
+    ttl: 10s
+  routes:
+    - condition:
+        method: GET
+        pathRegex: /
+      name: GET /
+      responseClasses:
+        - condition:
+            status:
+              max: 200
+              min: 200
+      isRetryable: true # <- This path can be retried
+    - condition:
+        method: GET
+        pathRegex: /[^/]*
+      name: GET /{id}
+      responseClasses:
+        - condition:
+            status:
+              max: 200
+              min: 200
+        - condition:
+            status:
+              max: 404
+              min: 404
+      isRetryable: true # <- This path can be retried

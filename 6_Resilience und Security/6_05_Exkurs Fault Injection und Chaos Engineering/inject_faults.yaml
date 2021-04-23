@@ -1,0 +1,74 @@
+# Traffic Split for Service Speaker, that injects errors into answers
+apiVersion: split.smi-spec.io/v1alpha1
+kind: TrafficSplit
+metadata:
+  name: inject-faults
+  namespace: demo 
+spec:
+  service: speakers
+  backends:
+  - service: speakers
+    weight: 80 
+  - service: error-injector
+    weight: 20    # Error rate at 20% is pretty high for demo purposes   
+---
+# Nginx config that always returns an error
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: error-injector
+  namespace: demo
+data:
+ nginx.conf: |-
+    events {}
+    http {
+        server {
+          listen 8081;
+            location / {
+                return 500;
+            }
+        }
+    }
+---
+# Deployment for the faulty nginx 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: error-injector
+  namespace: demo
+  labels:
+    app: error-injector
+spec:
+  selector:
+    matchLabels:
+      app: error-injector
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: error-injector
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:alpine
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: error-injector
+---
+# Service for the faulty nginx 
+apiVersion: v1
+kind: Service
+metadata:
+  name: error-injector
+  namespace: demo
+spec:
+  ports:
+  - name: service
+    port: 8081
+  selector:
+    app: error-injector

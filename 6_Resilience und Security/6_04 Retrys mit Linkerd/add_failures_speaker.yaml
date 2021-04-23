@@ -1,0 +1,24 @@
+# Speaker
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: speaker
+  name: speaker
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: speaker
+  template:
+    metadata:
+      labels:
+        run: speaker
+    spec:
+      containers:
+        - image: joergm/speaker
+          name: speaker
+          env:
+            - name: FAILURE_RATE
+              value: "50" # <- 50% of the calls will fail with 503

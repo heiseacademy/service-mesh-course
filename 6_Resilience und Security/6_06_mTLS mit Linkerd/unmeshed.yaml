@@ -1,0 +1,23 @@
+# Frontend
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: unmeshed
+  name: unmeshed
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: unmeshed
+  template:
+    metadata:
+      labels:
+        run: unmeshed
+      annotations:
+        linkerd.io/inject: disabled
+    spec:
+      containers:
+      - image: joergm/diagnose
+        name: unmeshed
