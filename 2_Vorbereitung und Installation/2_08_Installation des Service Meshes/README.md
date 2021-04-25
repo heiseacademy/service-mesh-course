@@ -13,5 +13,8 @@
 * `linkerd install | less`
 * `linkerd install | kubectl apply -f -`
 * `linkerd check`
+* `kubectl get deploy -n linkerd`
+* `linkerd jaeger install| kubectl apply -f -`
+* `linkerd viz install| kubectl apply -f -`
 
 ## Aktualisierungen und Anmerkungen
