@@ -17,7 +17,7 @@ spec:
         run: speaker
     spec:
       containers:
-        - image: joergm/speaker
+        - image: joergm/speaker:0.3.1
           name: speaker
           env:
             - name: FAILURE_RATE

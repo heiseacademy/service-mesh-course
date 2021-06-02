@@ -16,7 +16,7 @@ spec:
         run: loadgenerator
     spec:
       containers:
-      - image: joergm/loadgenerator
+      - image: joergm/loadgenerator:0.1.0
         name: loadgenerator
         env:
         - name: RUST_LOG

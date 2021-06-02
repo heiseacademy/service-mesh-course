@@ -26,7 +26,7 @@ spec:
         run: frontend
     spec:
       containers:
-        - image: joergm/frontend
+        - image: joergm/frontend:0.3.1
           name: frontend
           env:
             - name: OTEL_EXPORTER_JAEGER_ENDPOINT
@@ -67,7 +67,7 @@ spec:
         run: speaker
     spec:
       containers:
-        - image: joergm/speaker
+        - image: joergm/speaker:0.3.1
           name: speaker
           env:
             - name: OTEL_EXPORTER_JAEGER_ENDPOINT
@@ -108,7 +108,7 @@ spec:
         run: session
     spec:
       containers:
-        - image: joergm/session
+        - image: joergm/session:0.3.1
           name: session
           env:
             - name: OTEL_EXPORTER_JAEGER_ENDPOINT
@@ -149,7 +149,7 @@ spec:
         run: schedule
     spec:
       containers:
-        - image: joergm/schedule
+        - image: joergm/schedule:0.3.1
           name: schedule
           env:
             - name: OTEL_EXPORTER_JAEGER_ENDPOINT
